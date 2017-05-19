@@ -1,0 +1,18 @@
+{
+  "name": "nodeblog",
+  "description": "A NodeJS based blogger",
+  "main": "index.js",
+  "authors": [
+    "Shailendra Gupta"
+  ],
+  "license": "UNLICENSED",
+  "homepage": "https://github.com/charlie1404/nodeblog",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}

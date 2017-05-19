@@ -11,5 +11,8 @@
     "url": "https://github.com/charlie1404/nodeblog/"
   },
   "author": "Shailendra Gupta",
-  "license": "UNLICENSED"
+  "license": "UNLICENSED",
+  "devDependencies": {
+    "gulp": "^3.9.1"
+  }
 }
