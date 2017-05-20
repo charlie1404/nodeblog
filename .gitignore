@@ -120,3 +120,5 @@ Thumbs.db
 .idea/
 .idea_modules/
 /out/
+
+public/
