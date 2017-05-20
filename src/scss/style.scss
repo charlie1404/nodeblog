@@ -1,0 +1,13 @@
+/*
+    'Playball', cursive;
+    'Roboto', sans-serif;
+*/
+.nav, .pagination, .carousel, .panel-title a { cursor: pointer; }
+body {
+    background: #F9F9F9;
+    font-family: 'Roboto', sans-serif;
+    position: relative;
+}
+.testing {
+  width: percentage(5/7);
+}

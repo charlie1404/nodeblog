@@ -1,9 +1,9 @@
-var vikasBlog = angular.module('vikasBlog', ['ui.router', 'ui.bootstrap']);
-vikasBlog.config(["$locationProvider", function ($locationProvider) {
+var nodeBlog = angular.module('nodeBlog', ['ui.router', 'ui.bootstrap']);
+nodeBlog.config(["$locationProvider", function ($locationProvider) {
         $locationProvider.html5Mode(true);
     }]);
 
-vikasBlog.config(function ($stateProvider, $urlRouterProvider) {
+nodeBlog.config(function ($stateProvider, $urlRouterProvider) {
     $urlRouterProvider.otherwise('/');
     $stateProvider
             .state('/', {
@@ -20,7 +20,7 @@ vikasBlog.config(function ($stateProvider, $urlRouterProvider) {
             });
 });
 
-vikasBlog.controller('MainCtrl', function ($scope) {
+nodeBlog.controller('MainCtrl', function ($scope) {
     //;
 });
 

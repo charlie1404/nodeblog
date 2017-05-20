@@ -1,12 +1,12 @@
-var gulp   = require('gulp');
-var sass   = require('gulp-sass');
+var gulp = require('gulp');
+var sass = require('gulp-sass');
 var useref = require('gulp-useref');
 var uglify = require('gulp-uglify');
 var gulpIf = require('gulp-if');
-var merge = require('merge-stream');
+var clean = require('gulp-clean');
 
 gulp.task('default', function () {
-    console.log('gulp running');
+
 });
 
 gulp.task('hello', function () {
@@ -14,23 +14,23 @@ gulp.task('hello', function () {
 });
 
 gulp.task('sass', function () {
-    return gulp.src('assets/scss/**/*.scss')
+    return gulp.src('src/scss/**/*.scss')
             .pipe(sass())
-            .pipe(gulp.dest('assets/css/'));
+            .pipe(gulp.dest('src/css/'));
 });
 
-gulp.task('user_ref', ['sass'] ,function(){
-    var main = gulp.src('assets/*.html')
-        .pipe(useref())
-        .pipe(gulpIf('*.js', uglify()))
-        .pipe(gulp.dest('public'));
-    var temp = gulp.src('assets/templates/*.html')
-        .pipe(useref())
-        .pipe(gulpIf('*.js', uglify()))
-        .pipe(gulp.dest('public/templates'));
-    return merge(main, temp);
+gulp.task('user_ref', function () {
+    return gulp.src('src/index.html')
+            .pipe(useref())
+            .pipe(gulpIf('*.js', uglify()))
+            .pipe(gulp.dest('dist/'));
 });
 
 gulp.task('watch', function () {
-    //gulp.watch('assets/scss/**/*.scss', ['sass']);
+    //gulp.watch('src/scss/**/*.scss', ['sass']);
+});
+
+gulp.task('clean', function () {
+    return gulp.src(['dist/css/*.css','dist/js/*.js','dist/fonts/*','dist/templates/*.html','dist/images/*', 'dist/*.html'], {read: false})
+            .pipe(clean({force: true}));
 });
