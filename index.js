@@ -9,10 +9,10 @@ var routes        = require('./app/routes/index');
 
 var app = express();
 
-app.use('/css', express.static('public/css'));
-app.use('/images', express.static('public/images'));
-app.use('/fonts', express.static('public/fonts'));
-app.use('/js', express.static('public/js'));
+//app.use('/css', express.static('public/css'));
+//app.use('/images', express.static('public/images'));
+//app.use('/fonts', express.static('public/fonts'));
+//app.use('/js', express.static('public/js'));
 
 app.use(compression());
 app.use('/', routes);

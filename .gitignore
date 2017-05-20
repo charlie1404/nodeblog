@@ -122,3 +122,5 @@ Thumbs.db
 /out/
 
 public/
+
+index-dev.js
